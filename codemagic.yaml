@@ -3,11 +3,20 @@
 # You can also download your configuration from Worklow Editor to get started
 
 workflows:
-  example-workflow:
+  android-workflow:
     name: Build for Android
     scripts:
-      - name: Step name
+      - name: Build APK
         script: flutter build apk
+    publishing:
+      email:
+        recipients:
+          - thaiivts@example.com
+  ios-workflow:
+    name: Build for iOS
+    scripts:
+      - name: Build IPA
+        script: flutter build ios
     publishing:
       email:
         recipients:
